@@ -1,6 +1,7 @@
 import Header from "../components/header";
 import Slider from "../components/carousel";
 
+
 import artOne from "../assets/artis-img/fiersa.jpg"
 import artTwo from "../assets/artis-img/dzawin.jpg"
 import artThree from "../assets/artis-img/anji.jpg"
@@ -9,6 +10,7 @@ import artFive from "../assets/artis-img/arafah.jpg"
 import artSix from "../assets/artis-img/thomas.jpg"
 import artSeven from "../assets/artis-img/ricis.jpg"
 import artEight from "../assets/artis-img/naomi.jpeg"
+import bground from "../assets/artis-img/background.mp4"
 
 import hiking from "../assets/img/hiking.png"
 
@@ -27,7 +29,11 @@ export default function Home() {
                     <h1 className="title-artis container-sm" data-aos="fade-right">
                         Artis Yang Sudah Mendaki Gunung Prau
                     </h1>
+                    
                     <div className="list-artis" data-aos="fade-up" data-aos-duration="1000">
+                        <video className="bg-artis" autoPlay loop muted>
+                            <source src={bground} type="video/mp4"/>
+                        </video>
                         <figure data-aos="fade-right" data-aos-duration="1600">
                             <img src={artOne} alt="fiersa" className="photo-artis"/>
                             <figcaption className="name-artis">Fiersa Bersari</figcaption>
@@ -64,7 +70,7 @@ export default function Home() {
                 </div>
                 <div className="map">
                     <h1 className="title-map container-sm" data-aos="fade-right">gunung prau on map</h1>
-                    <iframe className="gmaps" id="gmap_canvas" data-aos="fade-up" data-aos-duration="700" src="https://maps.google.com/maps?q=gunung%20prau&t=k&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                    <iframe title="myFrame" className="gmaps" id="gmap_canvas" data-aos="fade-up" data-aos-duration="700" src="https://maps.google.com/maps?q=gunung%20prau&t=k&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
                 </div>
                 <div className="last-info container">
                     <div className="info-prau" data-aos="fade-up" data-aos-duration="700">

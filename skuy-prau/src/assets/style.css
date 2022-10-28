@@ -80,6 +80,7 @@ li {
 .artist {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-top: 60px;
     margin-bottom: 100px;
     text-align: center;
@@ -91,6 +92,12 @@ li {
     text-transform: uppercase;
 }
 
+.bg-artis {
+    width: 100%;
+    position: absolute;
+    border-radius: 20px;
+}
+
 .list-artis {
     display: flex;
     justify-content: center;
@@ -99,11 +106,10 @@ li {
     background-color: #2897C7;
     border-radius: 20px;
     margin: 0 auto;
-    padding: 16px;
 }
 
 figure {
-    margin: 25px 20px 25px 20px;
+    margin: 55px 20px 25px 20px;
 }
 
 .photo-artis {
@@ -115,6 +121,7 @@ figure {
 
 .name-artis {
     color: white;
+    font-weight: bold;
 }
 
 /* map */

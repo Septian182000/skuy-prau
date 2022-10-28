@@ -11,7 +11,7 @@ export default function About() {
         <>
             <Header name="Skuy Prau" />
             <div className="Main container">
-                <div className="profile shadow-lg p-3 mb-5 bg-body rounded mt-4">
+                <div className="profile shadow-lg p-3 mb-5 bg-body rounded mt-4" data-aos="slide-right">
                     <figure>
                         <img src={profile} alt="profile" className="photo-profile"/>
                         <figcaption className="name-profile">Kennedy Musyaffa Septian</figcaption>
@@ -24,20 +24,20 @@ export default function About() {
                     </div>
                 </div>
                 <div className="madefrom">
-                    <div className="title-madefrom">
+                    <div className="title-madefrom" data-aos="fade-top">
                         <h1>made from</h1>
                     </div>
                     <div className="list-made">
-                        <div className="card-made">
+                        <div className="card-made" data-aos="flip-up" data-aos-duration="600">
                             <img src={html} alt="html" className="logo-made"/>
                         </div>
-                        <div className="card-made">
+                        <div className="card-made" data-aos="flip-up" data-aos-duration="700">
                             <img src={css} alt="css" className="logo-made css"/>
                         </div>
-                        <div className="card-made">
+                        <div className="card-made" data-aos="flip-up" data-aos-duration="800">
                             <img src={js} alt="javascrpt" className="logo-made jvsript"/>
                         </div>
-                        <div className="card-made">
+                        <div className="card-made" data-aos="flip-up" data-aos-duration="900">
                             <img src={react} alt="react" className="logo-made react"/>
                         </div>
                     </div>
