@@ -1,18 +1,22 @@
-import Router from "./Routes";
+import Router from './Router';
 import "./assets/style.css"
 import "./assets/about.css"
-import ScrollToTop from "react-scroll-to-top"
+import "./assets/review.css"
 
+import { Provider } from "react-redux";
+import { store } from "./store/index";
+
+import ScrollToTop from "react-scroll-to-top"
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 AOS.init();
 
 function App() {
   return (
-    <div className="App">
-        <ScrollToTop smooth/>
-        <Router/>
-    </div>
+    <Provider store={store}>
+      <ScrollToTop smooth/>
+      <Router/>
+    </Provider>
   );
 }
 

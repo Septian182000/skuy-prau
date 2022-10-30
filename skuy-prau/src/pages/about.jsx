@@ -11,7 +11,7 @@ export default function About() {
         <>
             <Header name="Skuy Prau" />
             <div className="Main container">
-                <div className="profile shadow-lg p-3 mb-5 bg-body rounded mt-4" data-aos="slide-right">
+                <div className="profile shadow-lg p-3 mb-5 bg-body rounded mt-4" data-aos="slide-right" id="article">
                     <figure>
                         <img src={profile} alt="profile" className="photo-profile"/>
                         <figcaption className="name-profile">Kennedy Musyaffa Septian</figcaption>
