@@ -3,9 +3,9 @@ import { useDispatch } from "react-redux";
 import { createPendaki } from "../../store/features/pendakiSlice";
 
 export default function FormPendaki() {
-    const [input, setInput] = useState("");
-
     const dispatch = useDispatch();
+
+    const [input, setInput] = useState("");
 
     const handlerOnChange = (e) => {
         const name = e.target.name
@@ -18,9 +18,10 @@ export default function FormPendaki() {
         const formData = new FormData(e.target);
         const nama = formData.get("nama");
         const review = formData.get("review");
+        const jalur = formData.get("jalur");
         let newToDoList = !input
           ? alert("Title can't be empty")
-          : dispatch(createPendaki({ nama, review }));
+          : dispatch(createPendaki({ nama, review, jalur }));
     
         return newToDoList;
       };
@@ -37,13 +38,26 @@ export default function FormPendaki() {
                         className="me-4 input-text"
                         name="nama"
                     />
-                    <input 
-                        type="text" 
-                        placeholder="Sharing Your Experience" 
+                    <label className="nama-jalur">Pernah melewati jalur :
+                    <select 
+                        className="form-select nama-jalur" 
+                        aria-label="Default select example"
+                        name="jalur"
+                        onChange={handlerOnChange}
+                        required>
+                            <option value="Patak Banteng">Patak Banteng</option>
+                            <option value="Dwarawati">Dwarawati</option>
+                            <option value="Kalilembu">Kalilembu</option>
+                            <option value="Wates">Wates</option>
+                            <option value="Dieng">Dieng</option>
+                    </select>
+                    </label>
+                    <textarea 
+                        className="textarea" 
+                        placeholder="Sharing Your Experience..."
                         onChange={handlerOnChange} 
-                        className="me-4 input-text"
                         name="review"
-                    />
+                        />
                     </div>
                     <div className="button-design">
                         <input type="submit" className="btn"/>

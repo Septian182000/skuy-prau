@@ -1,5 +1,13 @@
-ul {
+ul,li {
     padding: 0;
+}
+
+.bg-review{
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
 }
 
 .content-form{
@@ -7,15 +15,18 @@ ul {
 }
 
 .list-form{
+    margin-top: 30px;
     margin-bottom: 60px;
 }
 
 .title-review {
     margin-top: 60px;
     text-transform: uppercase;
+    color: black;
 }
 
 .form-input {
+    color: black;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -28,7 +39,69 @@ input {
     padding: 16px;
     font-size: 20px;
     font-weight: bold;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
 }
+
+/* input:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+}
+
+input:focus {
+    cursor: text;
+    color: black;
+    background-color: white;
+    border-color: #333333;
+} */
+
+.textarea {
+    background-color: #eeeeee;
+    color: black;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: "Heebo", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    height: 180px;
+    transition: all 0.2s;
+}
+
+.textarea:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+    border: 2px solid black;
+}
+
+.textarea:focus {
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #333333;
+}
+
+.form-select{
+    background-color: white;
+    color: black;
+}
+/* 
+.form-select:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+    color: black;
+}
+
+.form-select:focus {
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #333333;
+} */
+
 
 .btn {
     width: 150px;
@@ -44,8 +117,10 @@ input {
 }
 
 .btn:hover {
-    box-shadow: 0 5px 50px 0 #17d97b inset;
+    box-shadow: 0 5px 50px 0 #17d97b inset,
+    0 5px 50px 0 #17d97b inset;
     font-weight: bold;
+    color: black;
 }
 
 
@@ -64,11 +139,13 @@ input {
     border-radius: 40px;
     border: 2px solid;
     margin-bottom: 20px;
+    color: black;
 }
 
 .nama-pendaki {
     font-weight: bold;
     font-size: 25px;
+    text-transform: uppercase;
 }
 
 .review-pendaki {
@@ -84,4 +161,18 @@ input {
 
 .action:hover {
     cursor: pointer;
+}  
+
+.nama-jalur {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nama-jalur:hover {
+    cursor: pointer;
+}
+
+.jalur-pendaki {
+    font-size: 16px;
+    font-weight: 600;
 }

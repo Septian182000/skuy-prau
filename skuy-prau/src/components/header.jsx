@@ -6,7 +6,7 @@ export default function Header(title) {
         <>
         <header className="sticky-top">
         <nav className="navbar navbar-expand-lg bg-light navBar">
-        <a href="#article" class="skip-link">Menuju ke konten</a>
+        <a href="#article" class="skip-link">SKIP NAVIGATION</a>
             <div className="container">
                 <a className="navbar-brand title" href="/">
                     <img src={photo} alt="logo" className="me-2 logo"/>
@@ -19,6 +19,9 @@ export default function Header(title) {
                     <ul className="navbar-nav ms-auto link">
                         <li className="nav-item me-4">
                             <Link className="nav-link active text-light" to="/review-pendaki">Review</Link>
+                        </li>
+                        <li className="nav-item me-4">
+                            <Link className="nav-link active text-light" to="/jalur-pendaki">Jalur</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link active text-light" to="/about">About</Link>

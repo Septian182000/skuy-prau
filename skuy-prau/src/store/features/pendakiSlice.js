@@ -6,7 +6,7 @@ const initialState = {
     componentStatus: false,
 };
 
-export const fetchPendaki = createAsyncThunk("fetch/todos", async() => {
+export const fetchPendaki = createAsyncThunk("fetch/pendaki", async() => {
     try {
         const response = await pendakiAPI.getAllPendaki();
         return response.data.pendaki;
@@ -15,9 +15,9 @@ export const fetchPendaki = createAsyncThunk("fetch/todos", async() => {
     }
 })
 
-export const createPendaki = createAsyncThunk("create/pendaki", async({nama, review}) => {
+export const createPendaki = createAsyncThunk("create/pendaki", async({nama, review, jalur}) => {
     try {
-        const response = await pendakiAPI.createPendaki({nama, review});
+        const response = await pendakiAPI.createPendaki({nama, jalur, review});
         return response.data.insert_pendaki;
     } catch(error) {
         console.log(error);

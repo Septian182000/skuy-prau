@@ -2,6 +2,7 @@ import Router from './Router';
 import "./assets/style.css"
 import "./assets/about.css"
 import "./assets/review.css"
+import "./assets/jalur.css"
 
 import { Provider } from "react-redux";
 import { store } from "./store/index";

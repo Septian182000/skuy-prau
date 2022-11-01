@@ -16,11 +16,13 @@ import hiking from "../assets/img/hiking.png"
 
 export default function Home() {
     return (
-        <>
+        <>  
             <Header name="Skuy Prau" />
-            <Slider/>
+            <div id="article">
+                <Slider/>
+            </div>
             <div className="Main container">
-                <div className="article" id="article">
+                <div className="article">
                     <h1 className="title-article container-sm" data-aos="fade-up">Article Tentang Gunung Prau</h1>
                     <h4 className="desc container-sm" data-aos="fade-right" data-aos-duration="800">Gunung Parahu adalah salah satu gunung di Dataran Tinggi Dieng, Jawa Tengah, Indonesia memiliki ketinggian 2.590 mdpl terletak pada koordinat 7°11′13″S 109°55′22″E yang mana keberadaannya juga merupakan tapal batas antara empat kabupaten yaitu Kabupaten Batang, Kabupaten Kendal, Kabupaten Temanggung dan Kabupaten Wonosobo. Puncak dari gunung Parahu merupakan padang rumput luas yang memanjang dari barat ke timur. Bukit-bukit dan sabana dengan sedikit pepohonan dapat dijumpai pada puncaknya. Gunung ini menjadi salah satu tujuan pendakian utama di Dataran Tinggi Dieng sebagai salah satu spot sunrise favorit bagi wisatawan.
                     </h4>
@@ -29,7 +31,6 @@ export default function Home() {
                     <h1 className="title-artis container-sm" data-aos="fade-right">
                         Artis Yang Sudah Mendaki Gunung Prau
                     </h1>
-                    
                     <div className="list-artis" data-aos="fade-up" data-aos-duration="1000">
                         <video className="bg-artis" autoPlay loop muted>
                             <source src={bground} type="video/mp4"/>
