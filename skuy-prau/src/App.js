@@ -1,8 +1,8 @@
 import Router from './Router';
-import "./assets/style.css"
-import "./assets/about.css"
-import "./assets/review.css"
-import "./assets/jalur.css"
+import "./assets/style/style.css"
+import "./assets/style/about.css"
+import "./assets/style/review.css"
+import "./assets/style/jalur.css"
 
 import { Provider } from "react-redux";
 import { store } from "./store/index";

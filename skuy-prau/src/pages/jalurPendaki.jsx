@@ -1,5 +1,5 @@
 import Header from "../components/header";
-import JalurProcces from "../components/jalur/jalurProcces";
+import JalurProcces from "../components/jalur/JalurProcces";
 
 export default function JalurPendaki () {
     return (

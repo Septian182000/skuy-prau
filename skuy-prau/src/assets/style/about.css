@@ -1,0 +1,118 @@
+.three-things {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-things {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    object-fit: cover;
+    gap: 50px;
+}
+
+.title-things{
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.photo-content {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.title-content {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+}
+
+.icon-rules {
+    margin-right: 6px;
+    color: blue;
+}
+
+.icon-warning{
+    margin-right: 6px;
+    color: red;
+}
+
+.list-rules {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.rules {
+    padding: 30px;
+}
+
+.title-rules {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.list-sosmed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sosmed-profile {
+    font-size: 20px;
+    margin: 0 15px 15px 15px;
+}
+
+.sosmed {
+    margin-right: 5px;
+}
+
+/* made from */
+
+.madefrom {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.title-madefrom {
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.list-made {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+}
+
+.card-made {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-made {
+    height: 200px;
+    width: 200px;
+}
+
+.css {
+    height: 200px;
+    width: 150px;
+}
+
+.jvsript {
+    height: 180px;
+    width: 180px;
+    margin-top: 20px;
+}
+
+.react {
+    height: 170px;
+    width: 190px;
+    margin-top: 20px;
+}

@@ -1,9 +1,9 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import todoSlice from "./pendakiSlice";
+import pendakiSlice from "./pendakiSlice";
 import jalurSlice from "./jalurSlice";
 
 const rootReducers = combineReducers({
-  pendaki: todoSlice,
+  pendaki: pendakiSlice,
   jalur: jalurSlice,
 });
 

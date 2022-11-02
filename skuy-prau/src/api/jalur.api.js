@@ -9,7 +9,17 @@ const jalurAPI = {
         } catch (err) {
           console.log(err);
         }
+    },
+    async updateJalur(data) {
+      try{
+        const id = data.id ;
+        const respone = await axiosInstance.patch(`/jalur/${id}`, data);
+        return respone;
+      } catch (err){
+        console.log(err);
       }
+    }
+    
 };
 
 export default jalurAPI

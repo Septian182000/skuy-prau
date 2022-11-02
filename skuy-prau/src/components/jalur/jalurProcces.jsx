@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchJalur } from "../../store/features/jalurSlice";
-import ListJalur from "./listJalur";
+import ListJalur from "./ListJalur";
 
 export default function JalurProcces(){
     const dispatch = useDispatch();

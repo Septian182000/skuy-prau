@@ -43,7 +43,7 @@ export const deletePendaki = createAsyncThunk("delete/pendaki", async (id) => {
     }
 });
 
-const todoSlice = createSlice({
+const pendakiSlice = createSlice({
     name: "pendaki",
     initialState,
     extraReducers(builder){
@@ -65,4 +65,4 @@ const todoSlice = createSlice({
     }
 })
 
-export default todoSlice.reducer;
+export default pendakiSlice.reducer;

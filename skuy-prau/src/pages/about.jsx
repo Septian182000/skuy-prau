@@ -1,26 +1,43 @@
 import Header from "../components/header";
 
-import profile from "../assets/img/user.jpg"
 import html from "../assets/about-img/html.png"
 import css from "../assets/about-img/css.png"
 import js from "../assets/about-img/js.png"
 import react from "../assets/about-img/react.png"
 
+import { Sop, Rules, Warning} from "../assets/dummy/sop"
+
 export default function About() {
+
     return (
         <>
             <Header name="Skuy Prau" />
             <div className="Main container">
-                <div className="profile shadow-lg p-3 mb-5 bg-body rounded mt-4" data-aos="slide-right" id="article">
-                    <figure>
-                        <img src={profile} alt="profile" className="photo-profile"/>
-                        <figcaption className="name-profile">Kennedy Musyaffa Septian</figcaption>
-                        <figcaption className="email-profile"><i className="fa-regular fa-envelope sosmed"></i>Musyaffa560@gmail.com</figcaption>
-                    </figure>
-                    <div className="list-sosmed">
-                        <p className="sosmed-profile"><i className="fa-brands fa-github sosmed"></i>Septian182000</p>
-                        <p className="sosmed-profile"><i className="fa-brands fa-linkedin sosmed"></i>kennedy musyaffa</p>
-                        <p className="sosmed-profile"><i className="fa-brands fa-instagram sosmed"></i>@k_ken09</p>
+                <div className="three-things shadow-lg p-3 mb-5 bg-body rounded mt-4" data-aos="slide-down" id="article">
+                    <div className="title-things">
+                        <h1 className="text-center">3 hal terpenting</h1>
+                    </div>
+                    <div className="content-things">
+                        {Sop.map((dataSop) => (
+                            <div>
+                                <img src={dataSop.img} alt="profile" className="photo-content"/>
+                                <p className="title-content text-center">{dataSop.title}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="list-rules">
+                    <div className="rules shadow-lg mb-5 bg-body rounded" data-aos="slide-right">
+                        <h1 className="mb-4">Peraturan</h1>
+                        {Rules.map((dataRules) => (
+                            <p className="title-rules"><i class="fa-solid fa-circle-exclamation icon-rules"></i>{dataRules.title}</p>
+                        ))}
+                    </div>
+                    <div className="rules shadow-lg mb-5 bg-body rounded" data-aos="slide-left">
+                        <h1 className="mb-4">Larangan yang harus dipatuhi</h1>
+                        {Warning.map((dataWarning) => (
+                            <p className="title-rules"><i class="fa-solid fa-triangle-exclamation icon-warning"></i>{dataWarning.title}</p>
+                        ))}
                     </div>
                 </div>
                 <div className="madefrom">

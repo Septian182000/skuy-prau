@@ -6,7 +6,7 @@ export default function Header(title) {
         <>
         <header className="sticky-top">
         <nav className="navbar navbar-expand-lg bg-light navBar">
-        <a href="#article" class="skip-link">SKIP NAVIGATION</a>
+        <a href="#article" className="skip-link">SKIP NAVIGATION</a>
             <div className="container">
                 <a className="navbar-brand title" href="/">
                     <img src={photo} alt="logo" className="me-2 logo"/>
@@ -24,7 +24,7 @@ export default function Header(title) {
                             <Link className="nav-link active text-light" to="/jalur-pendaki">Jalur</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link active text-light" to="/about">About</Link>
+                            <Link className="nav-link active text-light" to="/about">SOP</Link>
                         </li>
                     </ul>
                 </div>

@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Ms+Madi&family=Quicksand:wght@300&family=Rock+Salt&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand';
+}
+
+a {
+    text-decoration: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+.skip-link {
+    position: absolute;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0 0 0.25rem 0.25rem;
+    left: 0.5rem;
+    transform: translateY(-120%);
+    transition: tranform 325ms;
+    color: white;
+    font-weight: bold;
+  }
+   
+.skip-link:focus {
+    transform: translateY(0);
+    background-color: #2897C7;
+}
+  
+
+.title {
+    color: white;
+    font-size: 25px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.title:hover {
+    color: white;
+}
+
+.navBar {
+    background-color: #1d5460 !important;
+}
+
+.nav-link {
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.nav-link:hover {
+    background-color: #FCE700;
+    border-radius: 10px;
+    color: black !important;
+    font-weight: 800;
+    padding: 5px;
+}
+
+.slider img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* article */
+.article {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    font-style: italic;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.title-article{
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.desc {
+    font-weight: 400;
+}
+
+/* artist*/
+.artist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.title-artis {
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.bg-artis {
+    width: 100%;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.list-artis {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+    background-color: #2897C7;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+figure {
+    margin: 55px 20px 25px 20px;
+}
+
+.photo-artis {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name-artis {
+    color: white;
+    font-weight: bold;
+}
+
+/* map */
+.map {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.title-map {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.gmaps {
+    width: 80%;
+    height: 500px;
+    border-radius: 20px;
+}
+
+/* last info */
+
+.last-info {
+    display: flex;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.info-prau {
+    color: black;
+    padding: 16px;
+    border-radius: 20px;
+}
+
+.list-info {
+    font-size: 20px;
+}
+
+.list-icon {
+    margin-right: 5px;
+}
+
+.info-jalur {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 16px;
+    color: black;
+}
+
+.title-jalur {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.list-jalur {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.icon-jalur {
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+}
+
+.name-jalur {
+    color: black;
+}

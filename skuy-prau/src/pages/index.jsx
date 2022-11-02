@@ -10,7 +10,6 @@ import artFive from "../assets/artis-img/arafah.jpg"
 import artSix from "../assets/artis-img/thomas.jpg"
 import artSeven from "../assets/artis-img/ricis.jpg"
 import artEight from "../assets/artis-img/naomi.jpeg"
-import bground from "../assets/artis-img/background.mp4"
 
 import hiking from "../assets/img/hiking.png"
 
@@ -33,7 +32,7 @@ export default function Home() {
                     </h1>
                     <div className="list-artis" data-aos="fade-up" data-aos-duration="1000">
                         <video className="bg-artis" autoPlay loop muted>
-                            <source src={bground} type="video/mp4"/>
+                            <source src="https://firebasestorage.googleapis.com/v0/b/mini-project-366904.appspot.com/o/assets%2Fbackground.mp4?alt=media&token=ac91d304-0387-435f-b29c-00e40534654a" type="video/mp4"/>
                         </video>
                         <figure data-aos="fade-right" data-aos-duration="1600">
                             <img src={artOne} alt="fiersa" className="photo-artis"/>

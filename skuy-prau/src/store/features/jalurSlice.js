@@ -15,6 +15,15 @@ export const fetchJalur = createAsyncThunk("fetch/jalur", async() => {
     }
 })
 
+export const updateJalurById = createAsyncThunk("update/jalur", async({id, status}) => {
+    try{
+        const response = await jalurAPI.updateJalur({id, status})
+        return response.data.update_via_jalur_by_pk;
+    } catch(error) {
+        console.log(error)
+    }
+})
+
 const jalurSlice = createSlice({
     name: "jalur",
     initialState,
@@ -23,6 +32,9 @@ const jalurSlice = createSlice({
             .addCase(fetchJalur.fulfilled, (state, action) => {
                 state.dataJalur = action.payload
             })
+            .addCase(updateJalurById.fulfilled, (state, action) => {
+				state.componentStatus = !state.componentStatus;
+			})
     }
 })
 
