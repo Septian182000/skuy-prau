@@ -259,10 +259,9 @@ footer{
 .socials a i{
     font-size: 1.1rem;
     transition: color .4s ease;
-
-}
-.socials a:hover i{
-    color: aqua;
+    &:hover {
+        color: aqua;
+    }
 }
 
 .footer-bottom{
@@ -280,4 +279,10 @@ footer{
     text-transform: uppercase;
     opacity: .4;
     font-weight: 200;
+}
+
+@media screen and (max-width: 768px) {
+    .skip-link{
+        display: none;
+    }
 }

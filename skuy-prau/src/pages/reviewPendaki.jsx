@@ -2,6 +2,7 @@ import Header from "../components/header"
 import Footer from "../components/footer";
 import FormPendaki from "../components/review/formReview";
 import PendakiProcces from "../components/review/PendakiProcces";
+import { Helmet } from "react-helmet-async";
 
 // import bground from "../assets/artis-img/bg2.mp4"
 
@@ -12,6 +13,13 @@ export default function ReviewPendaki () {
                 {/* <video className="bg-review" autoPlay loop muted>
                     <source src={bground} type="video/mp4"/>
                 </video> */}
+                <Helmet>
+                    <title>Review Prau</title>
+                    <meta
+                        name="Review Gunung Prau"
+                        content="Get information from gunung prau"
+                    /> 
+                </Helmet>
                 <Header name="Skuy Prau"/>
                 <div className="content-form container" id="article">
                     <FormPendaki/>

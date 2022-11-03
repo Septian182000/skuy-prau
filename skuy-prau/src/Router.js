@@ -4,6 +4,7 @@ import Home from './pages';
 import ReviewPendaki from './pages/reviewPendaki'
 import ReviewAdmin from './pages/reviewAdmin';
 import JalurPendaki from './pages/jalurPendaki';
+import JalurAdmin from './pages/jalurAdmin';
 import About from './pages/about';
 import NotFound from './pages/notFound';
 
@@ -15,6 +16,7 @@ function Router() {
         <Route path='/review-pendaki' exact element={<ReviewPendaki/>}/>
         <Route path='/admin100101001' exact element={<ReviewAdmin/>}/>
         <Route path='/jalur-pendaki' element={<JalurPendaki/>}/>
+        <Route path='/jalur100101001' element={<JalurAdmin/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>

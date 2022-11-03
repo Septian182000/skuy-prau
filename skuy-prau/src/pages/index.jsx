@@ -1,22 +1,15 @@
 import Header from "../components/header";
 import Slider from "../components/carousel";
 import Footer from "../components/footer";
-
-
-import artOne from "../assets/artis-img/fiersa.jpg"
-import artTwo from "../assets/artis-img/dzawin.jpg"
-import artThree from "../assets/artis-img/anji.jpg"
-import artFour from "../assets/artis-img/dinda.jpg"
-import artFive from "../assets/artis-img/arafah.jpg"
-import artSix from "../assets/artis-img/thomas.jpg"
-import artSeven from "../assets/artis-img/ricis.jpg"
-import artEight from "../assets/artis-img/naomi.jpeg"
-
-import hiking from "../assets/img/hiking.png"
+import { Helmet } from 'react-helmet-async';
+import { Artis, Info, InfoJalur } from "../assets/dummy/home"
 
 export default function Home() {
     return (
         <>  
+            <Helmet>
+                <title>Skuy Prau</title>
+            </Helmet>
             <Header name="Skuy Prau" />
             <div id="article">
                 <Slider/>
@@ -35,38 +28,12 @@ export default function Home() {
                         <video className="bg-artis" autoPlay loop muted>
                             <source src="https://firebasestorage.googleapis.com/v0/b/mini-project-366904.appspot.com/o/assets%2Fbackground.mp4?alt=media&token=ac91d304-0387-435f-b29c-00e40534654a" type="video/mp4"/>
                         </video>
-                        <figure data-aos="fade-right" data-aos-duration="1600">
-                            <img src={artOne} alt="fiersa" className="photo-artis"/>
-                            <figcaption className="name-artis">Fiersa Bersari</figcaption>
-                        </figure>
-                        <figure data-aos="fade-right" data-aos-duration="1300">
-                            <img src={artTwo} alt="dzawin" className="photo-artis"/>
-                            <figcaption className="name-artis">Dzawin Nur</figcaption>
-                        </figure>
-                        <figure data-aos="fade-right" data-aos-duration="1000">
-                            <img src={artThree} alt="anji" className="photo-artis"/>
-                            <figcaption className="name-artis">Anji</figcaption>
-                        </figure>
-                        <figure data-aos="fade-right" data-aos-duration="700">
-                            <img src={artFour} alt="dinda" className="photo-artis"/>
-                            <figcaption className="name-artis">Dinda Kirana</figcaption>
-                        </figure>
-                        <figure data-aos="fade-right" data-aos-duration="400">
-                            <img src={artFive} alt="arafah" className="photo-artis"/>
-                            <figcaption className="name-artis">Arafah Rianti</figcaption>
-                        </figure>
-                        <figure data-aos="fade-right" data-aos-duration="1300">
-                            <img src={artSix} alt="thomas" className="photo-artis"/>
-                            <figcaption className="name-artis">Adinda Thomas</figcaption>
-                        </figure>
-                        <figure data-aos="fade-right" data-aos-duration="1000">
-                            <img src={artSeven} alt="ricis" className="photo-artis"/>
-                            <figcaption className="name-artis">Ria Ricis</figcaption>
-                        </figure>
-                        <figure data-aos="fade-right" data-aos-duration="700">
-                            <img src={artEight} alt="naomi" className="photo-artis"/>
-                            <figcaption className="name-artis">Naomi Zaskia</figcaption>
-                        </figure>
+                        {Artis.map((dataArtis) => (
+                            <figure data-aos="fade-right" data-aos-duration="1000" key={dataArtis.id}>
+                                <img src={dataArtis.img} alt={dataArtis.nama} className="photo-artis"/>
+                                <figcaption className="name-artis">{dataArtis.nama}</figcaption>
+                            </figure>
+                        ))}
                     </div>
                 </div>
                 <div className="map">
@@ -77,24 +44,11 @@ export default function Home() {
                     <div className="info-prau" data-aos="fade-up" data-aos-duration="700">
                         <h1 className="container-sm">INFO PENDAKIAN</h1>
                         <ul className="list-info">
-                            <li className="container-sm"><i className="fa-solid fa-house-user list-icon"/>
-                                Basecamp Buka Setiap Hari Tergantung Keadaan
-                            </li>
-                            <li className="container-sm"><i className="fa-solid fa-dollar-sign list-icon"></i>
-                                Biaya tiket masuk Rp. 15,0000 / Orang
-                            </li>
-                            <li className="container-sm"><i className="fa-solid fa-dollar-sign list-icon"></i>
-                                Biaya parkir motor Rp. 10,0000
-                            </li>
-                            <li className="container-sm"><i className="fa-solid fa-dollar-sign list-icon"></i>
-                                Biaya parkir mobil Rp. 25,0000
-                            </li>
-                            <li className="container-sm"><i className="fa-solid fa-dollar-sign list-icon"></i>
-                                Biaya naik ojek Rp.10,0000
-                            </li>
-                            <li className="container-sm"><i className="fa-solid fa-person-hiking list-icon"></i>
-                                Jalur Patak Banteng jalur terfavorit
-                            </li>
+                            {Info.map((infoPrau) => (
+                                <li className="container-sm" key={infoPrau.id}><i className={infoPrau.icon}/>
+                                    {infoPrau.title}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div className="info-jalur" data-aos="fade-down" data-aos-duration="700">
@@ -102,30 +56,12 @@ export default function Home() {
                             <h1>jalur pendakian</h1>
                         </div>
                         <div className="list-jalur">
-                        <figure>
-                            <img src={hiking} alt="naomi" className="icon-jalur"/>
-                            <figcaption className="name-jalur fs-5">Patak Banteng</figcaption>
-                        </figure>
-                        <figure>
-                            <img src={hiking} alt="naomi" className="icon-jalur"/>
-                            <figcaption className="name-jalur fs-5">Dwarawati</figcaption>
-                        </figure>
-                        <figure>
-                            <img src={hiking} alt="naomi" className="icon-jalur"/>
-                            <figcaption className="name-jalur fs-5">Dieng Wetan</figcaption>
-                        </figure>
-                        <figure>
-                            <img src={hiking} alt="naomi" className="icon-jalur"/>
-                            <figcaption className="name-jalur fs-5">Kalilembu</figcaption>
-                        </figure>
-                        <figure>
-                            <img src={hiking} alt="naomi" className="icon-jalur"/>
-                            <figcaption className="name-jalur fs-5">Wates</figcaption>
-                        </figure>
-                        <figure>
-                            <img src={hiking} alt="naomi" className="icon-jalur"/>
-                            <figcaption className="name-jalur fs-5">Igirmranak</figcaption>
-                        </figure>
+                        {InfoJalur.map((jalur) => (
+                            <figure key={jalur.id}>
+                                <img src={jalur.img} alt={jalur.nama} className="icon-jalur"/>
+                                <figcaption className="name-jalur fs-5">{jalur.nama}</figcaption>
+                            </figure>
+                        ))}
                         </div>
                     </div>
                 </div>

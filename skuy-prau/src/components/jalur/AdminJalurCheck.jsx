@@ -1,4 +1,8 @@
-export default function ListJalur({jalur}){
+import { useDispatch } from "react-redux"
+import { updateJalurById } from "../../store/features/jalurSlice"
+
+export default function ListAdminJalur({jalur}){
+    const dispatch = useDispatch()
     return (
         <>
             <section className="oldGreen" data-aos="flip-right">
@@ -11,7 +15,11 @@ export default function ListJalur({jalur}){
                         <div className="postcard__preview-txt">{jalur.descripsi}</div>
                         <ul className="postcard__tagbox">
                             <li className="tag__item"><i className="fa-solid fa-person-hiking me-2"></i>{jalur.jarak}</li>
-                            <div>
+                            <div 
+                                className="status" 
+                                onClick={() => {
+							        dispatch(updateJalurById({ ...jalur, status: !jalur.status }));
+						        }}>
                                 <li className={jalur.status ? 'buka' : 'tutup'}></li>
                             </div>
                         </ul>
