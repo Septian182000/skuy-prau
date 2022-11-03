@@ -1,9 +1,5 @@
 import Header from "../components/header";
-
-import html from "../assets/about-img/html.png"
-import css from "../assets/about-img/css.png"
-import js from "../assets/about-img/js.png"
-import react from "../assets/about-img/react.png"
+import Footer from "../components/footer";
 
 import { Sop, Rules, Warning} from "../assets/dummy/sop"
 
@@ -40,26 +36,8 @@ export default function About() {
                         ))}
                     </div>
                 </div>
-                <div className="madefrom">
-                    <div className="title-madefrom" data-aos="fade-top">
-                        <h1>made from</h1>
-                    </div>
-                    <div className="list-made">
-                        <div className="card-made" data-aos="flip-up" data-aos-duration="600">
-                            <img src={html} alt="html" className="logo-made"/>
-                        </div>
-                        <div className="card-made" data-aos="flip-up" data-aos-duration="700">
-                            <img src={css} alt="css" className="logo-made css"/>
-                        </div>
-                        <div className="card-made" data-aos="flip-up" data-aos-duration="800">
-                            <img src={js} alt="javascrpt" className="logo-made jvsript"/>
-                        </div>
-                        <div className="card-made" data-aos="flip-up" data-aos-duration="900">
-                            <img src={react} alt="react" className="logo-made react"/>
-                        </div>
-                    </div>
-                </div>
             </div>
+            <Footer/>
         </>
     )
 }

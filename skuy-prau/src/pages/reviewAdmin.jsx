@@ -1,4 +1,5 @@
 import Header from "../components/header"
+import Footer from "../components/footer";
 import FormPendaki from "../components/review/formReview";
 import AdminProcces from "../components/review/AdminProcces";
 
@@ -12,6 +13,7 @@ export default function ReviewAdmin () {
             <div className="list-form container">
                 <AdminProcces/>
             </div>
+            <Footer/>
         </>
     )
 }

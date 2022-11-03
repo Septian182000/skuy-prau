@@ -1,4 +1,5 @@
 import Header from "../components/header"
+import Footer from "../components/footer";
 import FormPendaki from "../components/review/formReview";
 import PendakiProcces from "../components/review/PendakiProcces";
 
@@ -18,6 +19,7 @@ export default function ReviewPendaki () {
                 <div className="list-form container">
                     <PendakiProcces/>
                 </div>
+                <Footer/>
             </div>
         </>
     )

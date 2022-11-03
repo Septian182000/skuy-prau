@@ -5,30 +5,28 @@ export default function ListJalur({jalur}){
     const dispatch = useDispatch()
     return (
         <>
-            <div className="list-jalur">
-                <div className="card-jalur">   
-                        <div className="pendaki">
-                            <img src={jalur.image} className="poto-jalur" alt=""/>
-                        </div>
-                        <div className="content-desc">
-                            <div className="content">
-                                <div className="pendaki">
-                                    <p className="nama-jalur-page">{jalur.nama}</p>
-                                </div>
-                                <div className="pendaki">
-                                    <p className="harga-jalur-page">Harga tiket masuk : Rp.{jalur.harga}</p>
-                                </div>  
-                            </div>
+            <section className="oldGreen" data-aos="flip-right">
+                <div className="container py-4">
+                    <article className="postcard oldGreen blue">
+                    <img className="postcard__img" src={jalur.image} alt={jalur.nama} />
+                    <div className="postcard__text">
+                        <h1 className="postcard__title blue">{jalur.nama}</h1>
+                        <div className="postcard__bar"></div>
+                        <div className="postcard__preview-txt">{jalur.descripsi}</div>
+                        <ul className="postcard__tagbox">
+                            <li className="tag__item"><i class="fa-solid fa-person-hiking me-2"></i>{jalur.jarak}</li>
                             <div 
                                 className="status" 
                                 onClick={() => {
 							        dispatch(updateJalurById({ ...jalur, status: !jalur.status }));
 						        }}>
-                                <p className={jalur.status ? 'buka' : 'tutup'}></p>
+                                <li className={jalur.status ? 'buka' : 'tutup'}></li>
                             </div>
-                        </div>
+                        </ul>
+                    </div>
+                    </article>
                 </div>
-            </div>   
+            </section>
         </>
     )
 }

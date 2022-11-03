@@ -1,5 +1,6 @@
 import Header from "../components/header";
 import Slider from "../components/carousel";
+import Footer from "../components/footer";
 
 
 import artOne from "../assets/artis-img/fiersa.jpg"
@@ -129,6 +130,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }
