@@ -116,3 +116,17 @@
     width: 190px;
     margin-top: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    .list-rules {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .rules {
+        width: 100%;
+    }
+    .rules h1 {
+        text-align: center;
+    }
+}

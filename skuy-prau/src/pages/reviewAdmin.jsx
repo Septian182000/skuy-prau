@@ -3,6 +3,7 @@ import Footer from "../components/footer";
 import FormPendaki from "../components/review/formReview";
 import AdminProcces from "../components/review/AdminProcces";
 import { Helmet } from "react-helmet-async";
+import AutoTop from "../components/AutoTop";
 
 export default function ReviewAdmin () {
     return (
@@ -14,6 +15,7 @@ export default function ReviewAdmin () {
                     content="Get information from gunung prau"
                 /> 
             </Helmet>
+            <AutoTop/>
             <Header name="Skuy Prau"/>
             <div className="content-form container" id="article">
                 <FormPendaki/>

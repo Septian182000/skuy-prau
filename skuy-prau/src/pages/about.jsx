@@ -1,7 +1,7 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { Helmet } from "react-helmet-async";
-
+import AutoTop from "../components/AutoTop";
 import { Sop, Rules, Warning} from "../assets/dummy/sop"
 
 export default function About() {
@@ -15,6 +15,7 @@ export default function About() {
                     content="Get information from gunung prau"
                 />    
             </Helmet>
+            <AutoTop/>
             <Header name="Skuy Prau" />
             <div className="Main container">
                 <div className="three-things shadow-lg p-3 mb-5 bg-body rounded mt-4" data-aos="slide-down" id="article">

@@ -3,6 +3,7 @@ import Slider from "../components/carousel";
 import Footer from "../components/footer";
 import { Helmet } from 'react-helmet-async';
 import { Artis, Info, InfoJalur } from "../assets/dummy/home"
+import AutoTop from "../components/AutoTop";
 
 export default function Home() {
     return (
@@ -10,6 +11,7 @@ export default function Home() {
             <Helmet>
                 <title>Skuy Prau</title>
             </Helmet>
+            <AutoTop/>
             <Header name="Skuy Prau" />
             <div id="article">
                 <Slider/>

@@ -130,8 +130,7 @@ input:focus {
     border-radius: 40px;
     border: 2px solid;
     margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
+    color: black;
 }
 
 .list-pendaki{
@@ -142,22 +141,37 @@ input:focus {
     color: black;
 }
 
+.random{
+    display: flex;
+    justify-content: center;
+}
+
+.img-random{
+    justify-content: center;
+    border: 2px solid;
+}
+
 .nama-pendaki {
     font-weight: bold;
     font-size: 25px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .review-pendaki {
     font-style: italic;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 17px;
     text-align: justify;
 }
 
 .action {
+    margin: 0 auto;
     font-size: 30px;
+    align-items: center;
+    width: 2%;
     &:hover{
+        color: red;
         cursor: pointer;
     }
 }
@@ -171,12 +185,16 @@ input:focus {
 }
 
 .jalur-pendaki {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    text-align: center; 
 }
 
 @media screen and (max-width: 768px) {
     .form-input{
         width: 100%;
+    }
+    .action {
+        display: flex;
+        justify-content: center;
     }
 }

@@ -2,6 +2,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import JalurAdminProcces from "../components/jalur/JalurAdminProcess";
 import { Helmet } from "react-helmet-async";
+import AutoTop from "../components/AutoTop";
 
 export default function JalurAdmin() {
     return (
@@ -13,6 +14,7 @@ export default function JalurAdmin() {
                     content="Get information from gunung prau"
                 /> 
             </Helmet>
+            <AutoTop/>
             <Header name="Skuy Prau"/>
             <div className="list-form container">
                 <JalurAdminProcces/>

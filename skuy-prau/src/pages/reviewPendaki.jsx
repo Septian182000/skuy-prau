@@ -3,8 +3,7 @@ import Footer from "../components/footer";
 import FormPendaki from "../components/review/formReview";
 import PendakiProcces from "../components/review/PendakiProcces";
 import { Helmet } from "react-helmet-async";
-
-// import bground from "../assets/artis-img/bg2.mp4"
+import AutoTop from "../components/AutoTop";
 
 export default function ReviewPendaki () {
     return (
@@ -20,6 +19,7 @@ export default function ReviewPendaki () {
                         content="Get information from gunung prau"
                     /> 
                 </Helmet>
+                <AutoTop/>
                 <Header name="Skuy Prau"/>
                 <div className="content-form container" id="article">
                     <FormPendaki/>
