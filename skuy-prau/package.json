@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@bigheads/core": "^0.3.3",
     "@apollo/client": "^3.7.1",
+    "@bigheads/core": "^0.3.3",
     "@reduxjs/toolkit": "^1.8.6",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -21,6 +21,7 @@
     "react-scroll-to-top": "^3.0.0",
     "redux-persist": "^6.0.0",
     "sass": "^1.55.0",
+    "swiper": "^8.4.4",
     "web-vitals": "^2.1.4",
     "workbox-background-sync": "^6.5.4",
     "workbox-broadcast-update": "^6.5.4",
@@ -61,5 +62,8 @@
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.5"
-  }
+  },
+  "tags": [
+    "swiper"
+  ]
 }

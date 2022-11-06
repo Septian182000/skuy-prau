@@ -148,7 +148,7 @@ input:focus {
 
 .img-random{
     justify-content: center;
-    border: 2px solid;
+    border: 2px solid black;
 }
 
 .nama-pendaki {
@@ -176,6 +176,30 @@ input:focus {
     }
 }
 
+.action-modal {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 30px;
+    width: 2%;
+}
+
+.close-modal {
+    margin: 0 25px 0 25px;
+    &:hover{
+        color: red;
+        cursor: pointer;
+    }
+}
+
+.delete-modal {
+    margin: 0 25px 0 25px;
+    &:hover{
+        color: greenyellow;
+        cursor: pointer;
+    }
+}
+
 .nama-jalur {
     font-size: 18px;
     font-weight: bold;
@@ -190,6 +214,9 @@ input:focus {
 }
 
 @media screen and (max-width: 768px) {
+    .title-review{
+        margin-top: 30px;
+    }
     .form-input{
         width: 100%;
     }

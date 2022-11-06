@@ -4,6 +4,9 @@ import "./assets/style/about.scss"
 import "./assets/style/review.scss"
 import "./assets/style/jalur.scss"
 
+
+import "swiper/css/bundle";
+
 import { Provider } from "react-redux";
 import { store } from "./store/index";
 

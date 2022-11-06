@@ -6,6 +6,51 @@ export default function FormPendaki() {
     const dispatch = useDispatch();
 
     const [input, setInput] = useState("");
+    const [setErrMsg] = useState("")
+    const [errMsgName, setErrorMessageName] = useState("")
+    const [errMsgReview, setErrorMessageReview] = useState("")
+    const [disabledButton, setDisable] = useState(false)
+    const nameRegex = new RegExp(/^[A-Za-z ]*$/);
+
+    const handlerName = e => {
+        const name = e.target.name
+        const value = e.target.value
+
+        if(name === "nama"){
+            if(nameRegex.test(value)){
+                setErrorMessageName("")
+                setDisable(false)
+            } else if(name !== nameRegex){
+                setErrorMessageName({nama: "Nama Harus Berupa Huruf"})
+                setDisable(true)
+            }
+        }
+        
+        setInput({
+            ...input,
+            [name]: value,
+        })
+    }
+
+    const handlerReview = e => {
+        const name = e.target.name
+        const value = e.target.value
+
+        if(name === "review"){
+            if(value.length < 10){
+                setErrorMessageReview({review: "Minimal 10 Huruf"})
+                setDisable(true)
+            }else if(value.length > 10){
+                setErrorMessageReview("");
+                setDisable(false);
+            }
+        }
+        
+        setInput({
+            ...input,
+            [name]: value,
+        })
+    }
 
     const handlerOnChange = (e) => {
         const name = e.target.name
@@ -22,7 +67,15 @@ export default function FormPendaki() {
         let newToDoList = !input
           ? alert("Title can't be empty")
           : dispatch(createPendaki({ nama, review, jalur }));
-    
+
+        if(errMsgName !== "" || errMsgReview !== ""){
+            setErrMsg(alert('Data pendaftar tidak sesuai'))
+        }else {
+            setInput(nama, review, jalur)
+            e.target.reset();
+            setErrMsg(alert(`Data Berhasil Diterima!`))
+            setErrMsg("")
+        }
         return newToDoList;
       };
 
@@ -34,10 +87,11 @@ export default function FormPendaki() {
                     <input 
                         type="text" 
                         placeholder="Put Your Name" 
-                        onChange={handlerOnChange} 
+                        onChange={handlerName} 
                         className="me-4 input-text"
                         name="nama"
                     />
+                    <span className="text-danger fs-5">{errMsgName.nama}</span>
                     <label className="nama-jalur">Pernah melewati jalur :
                     <select 
                         className="form-select nama-jalur" 
@@ -55,12 +109,13 @@ export default function FormPendaki() {
                     <textarea 
                         className="textarea" 
                         placeholder="Sharing Your Experience..."
-                        onChange={handlerOnChange} 
+                        onChange={handlerReview} 
                         name="review"
                         />
+                    <span className="text-danger fs-5">{errMsgReview.review}</span>    
                     </div>
                     <div className="button-design">
-                        <input type="submit" className="btn"/>
+                        <input type="submit" className="btn" disabled={disabledButton}/>
                     </div>
                 </form>
             </div>

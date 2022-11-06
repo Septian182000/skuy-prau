@@ -1,6 +1,7 @@
 import Header from "../components/header";
 import Slider from "../components/carousel";
 import Footer from "../components/footer";
+import SwiperImage from "../components/swiper";
 import { Helmet } from 'react-helmet-async';
 import { Artis, Info, InfoJalur } from "../assets/dummy/home"
 import AutoTop from "../components/AutoTop";
@@ -21,6 +22,10 @@ export default function Home() {
                     <h1 className="title-article container-sm" data-aos="fade-up">Article Tentang Gunung Prau</h1>
                     <h4 className="desc container-sm" data-aos="fade-right" data-aos-duration="800">Gunung Parahu adalah salah satu gunung di Dataran Tinggi Dieng, Jawa Tengah, Indonesia memiliki ketinggian 2.590 mdpl terletak pada koordinat 7°11′13″S 109°55′22″E yang mana keberadaannya juga merupakan tapal batas antara empat kabupaten yaitu Kabupaten Batang, Kabupaten Kendal, Kabupaten Temanggung dan Kabupaten Wonosobo. Puncak dari gunung Parahu merupakan padang rumput luas yang memanjang dari barat ke timur. Bukit-bukit dan sabana dengan sedikit pepohonan dapat dijumpai pada puncaknya. Gunung ini menjadi salah satu tujuan pendakian utama di Dataran Tinggi Dieng sebagai salah satu spot sunrise favorit bagi wisatawan.
                     </h4>
+                </div>
+                <div className="control-swiper container">
+                    <h1 className="title-swiper container-sm">kata mereka</h1>
+                    <SwiperImage/>
                 </div>
                 <div className="artist">
                     <h1 className="title-artis container-sm" data-aos="fade-right">
