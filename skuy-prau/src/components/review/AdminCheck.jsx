@@ -4,6 +4,7 @@ import { generateDiceBearAvataaars } from "../../utils/randomImage"
 
 export default function AdminCheck(pendaki){
     const dispatch = useDispatch();
+
     return (
         <>
             <div className="list-admin" data-aos="flip-left">

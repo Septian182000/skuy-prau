@@ -1,8 +1,8 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { Helmet } from "react-helmet-async";
-import AutoTop from "../components/AutoTop";
-import { Sop, Rules, Warning} from "../assets/dummy/sop"
+import AutoTop from "../utils/AutoTop";
+import { Sop, Rules, Warning} from "../assets/dummy/sop";
 
 export default function About() {
 

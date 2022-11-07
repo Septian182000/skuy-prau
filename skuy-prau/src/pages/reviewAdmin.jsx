@@ -1,9 +1,8 @@
 import Header from "../components/header"
 import Footer from "../components/footer";
-import FormPendaki from "../components/review/formReview";
 import AdminProcces from "../components/review/AdminProcces";
 import { Helmet } from "react-helmet-async";
-import AutoTop from "../components/AutoTop";
+import AutoTop from "../utils/AutoTop";
 
 export default function ReviewAdmin () {
     return (
@@ -17,9 +16,6 @@ export default function ReviewAdmin () {
             </Helmet>
             <AutoTop/>
             <Header name="Skuy Prau"/>
-            <div className="content-form container" id="article">
-                <FormPendaki/>
-            </div>
             <div className="list-form container">
                 <AdminProcces/>
             </div>

@@ -15,6 +15,15 @@ export const fetchPendaki = createAsyncThunk("fetch/pendaki", async() => {
     }
 })
 
+export const getPendakiByJalur = createAsyncThunk("getJalur/pendaki", async(data) => {
+    try {
+        const response = await pendakiAPI.getPendakiByJalur(data);
+        return response.data.pendaki;
+    } catch(error) {
+        console.log(error);
+    }
+})
+
 export const createPendaki = createAsyncThunk("create/pendaki", async({nama, review, jalur}) => {
     try {
         const response = await pendakiAPI.createPendaki({nama, jalur, review});
@@ -49,6 +58,9 @@ const pendakiSlice = createSlice({
     extraReducers(builder){
         builder
             .addCase(fetchPendaki.fulfilled, (state, action) => {
+                state.data = action.payload;
+            })
+            .addCase(getPendakiByJalur.fulfilled, (state, action) => {
                 state.data = action.payload;
             })
             .addCase(createPendaki.fulfilled, (state, action) =>{

@@ -306,7 +306,7 @@ footer{
     font-weight: 200;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 835px) {
     .slider img {
         height: 250px;
         object-fit: cover;
@@ -400,5 +400,17 @@ footer{
         height: 120px;
         width: 120px;
         object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .bg-artis {
+        margin-top: 10px;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    .list-artis {
+        background-color: white;
     }
 }

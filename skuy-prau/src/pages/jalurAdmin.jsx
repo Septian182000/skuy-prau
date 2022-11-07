@@ -2,7 +2,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import JalurAdminProcces from "../components/jalur/JalurAdminProcess";
 import { Helmet } from "react-helmet-async";
-import AutoTop from "../components/AutoTop";
+import AutoTop from "../utils/AutoTop"
 
 export default function JalurAdmin() {
     return (

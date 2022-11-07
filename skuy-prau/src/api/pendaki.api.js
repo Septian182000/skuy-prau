@@ -10,6 +10,14 @@ const pendakiAPI = {
           console.log(err);
         }
       },
+      async getPendakiByJalur(jalur){
+        try{
+          const response = await axiosInstance.get(`/review/${jalur}`)
+          return response;
+        } catch(error){
+          console.log(error)
+        }
+      },
       async createPendaki(data) {
         try {
           const response = await axiosInstance.post("/review", data);

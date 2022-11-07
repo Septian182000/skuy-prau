@@ -58,25 +58,33 @@ export default function FormPendaki() {
         setInput(name, value)
     }
 
+    const refreshPage = () => {
+        window.location.reload(false);
+    }
+
     const handleOnSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
         const nama = formData.get("nama");
         const review = formData.get("review");
         const jalur = formData.get("jalur");
-        let newToDoList = !input
-          ? alert("Title can't be empty")
-          : dispatch(createPendaki({ nama, review, jalur }));
-
-        if(errMsgName !== "" || errMsgReview !== ""){
-            setErrMsg(alert('Data pendaftar tidak sesuai'))
-        }else {
-            setInput(nama, review, jalur)
+        if(input){
+            const succes = dispatch(createPendaki({ nama, review, jalur }));
             e.target.reset();
-            setErrMsg(alert(`Data Berhasil Diterima!`))
-            setErrMsg("")
+            setErrMsg(alert(`Review berhasil ditambahkan!`))
+            return succes;
+        }else {
+            setErrMsg(alert(`Review tidak sesuai!`))
         }
-        return newToDoList;
+
+        // if(errMsgName !== "" || errMsgReview !== ""){
+        //     setErrMsg(alert('Review tidak sesuai'))
+        // }else {
+        //     setInput(nama, review, jalur)
+        //     e.target.reset();
+        //     setErrMsg(alert(`Data Berhasil Diterima!`))
+        //     setErrMsg("")
+        // }
       };
 
     return (
@@ -115,7 +123,7 @@ export default function FormPendaki() {
                     <span className="text-danger fs-5">{errMsgReview.review}</span>    
                     </div>
                     <div className="button-design">
-                        <input type="submit" className="btn" disabled={disabledButton}/>
+                        <input type="submit" className="btn" disabled={disabledButton} onClick={refreshPage}/>
                     </div>
                 </form>
             </div>

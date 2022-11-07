@@ -3,7 +3,7 @@ import Footer from "../components/footer";
 import FormPendaki from "../components/review/formReview";
 import PendakiProcces from "../components/review/PendakiProcces";
 import { Helmet } from "react-helmet-async";
-import AutoTop from "../components/AutoTop";
+import AutoTop from "../utils/AutoTop";
 
 export default function ReviewPendaki () {
     return (

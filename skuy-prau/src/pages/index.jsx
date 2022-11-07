@@ -3,8 +3,8 @@ import Slider from "../components/carousel";
 import Footer from "../components/footer";
 import SwiperImage from "../components/swiper";
 import { Helmet } from 'react-helmet-async';
-import { Artis, Info, InfoJalur } from "../assets/dummy/home"
-import AutoTop from "../components/AutoTop";
+import { Artis, Info, InfoJalur } from "../assets/dummy/home";
+import AutoTop from "../utils/AutoTop";
 
 export default function Home() {
     return (

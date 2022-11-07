@@ -20,7 +20,7 @@ ul,li {
 }
 
 .title-review {
-    margin-top: 60px;
+    margin-top: 40px;
     text-transform: uppercase;
     color: black;
 }
@@ -125,6 +125,10 @@ input:focus {
 
 
 /* list pendaki */
+.name-filter {
+    width: 100px;
+}
+
 .list-admin{
     padding: 20px;
     border-radius: 40px;
@@ -217,9 +221,15 @@ input:focus {
     .title-review{
         margin-top: 30px;
     }
+
     .form-input{
         width: 100%;
     }
+
+    .filter-option {
+        width: 100% !important;
+    }
+
     .action {
         display: flex;
         justify-content: center;
