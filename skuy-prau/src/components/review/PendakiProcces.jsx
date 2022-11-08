@@ -36,41 +36,35 @@ export default function PendakiProcces(){
             </select>
             </div>
             <div>
-                <ul>
-                    {listOfPendaki.filter((val) => {
-                        if (search === "") {
-                            return val;
-                        } else if (
-                            val.jalur.toLowerCase().includes(search.toLowerCase())
-                        ){
-                            return val;
-                        }
-                    }).map((val, key) => {
-                        return(
-                            <ul key={key}>
-                                <div className="list-pendaki" data-aos="flip-left">
-                                    <div className="random">
-                                    <img
-                                        className="rounded-circle img-random"
-                                        src={generateDiceBearAvataaars(Math.random())}
-                                        style={{ width: "80px", height: "80px", margin: "10px", padding: "10px"}}
-                                        alt="images"
-                                    ></img>
-                                    </div>
-                                    <div className="pendaki">
-                                        <p className="nama-pendaki">{val.nama}</p>
-                                    </div>
-                                    <div className="pendaki">
-                                        <p className="jalur-pendaki">Melewati jalur {val.jalur}</p>
-                                    </div>
-                                    <div className="pendaki">
-                                        <p className="review-pendaki">{val.review}</p>
-                                    </div>
-                                </div>
-                            </ul>
-                        )
-                    })}
-                </ul>
+                {listOfPendaki.filter((val) => {
+                    if (search === "") {
+                        return val;
+                    } else if (
+                        val.jalur.toLowerCase().includes(search.toLowerCase())
+                    ){
+                        return val;
+                    }
+                }).map((val, key) => (
+                    <div className="list-pendaki" data-aos="flip-left" key={key}>
+                        <div className="random">
+                            <img
+                                className="rounded-circle img-random"
+                                src={generateDiceBearAvataaars(Math.random())}
+                                style={{ width: "80px", height: "80px", margin: "10px", padding: "10px"}}
+                                alt="images"
+                            ></img>
+                        </div>
+                        <div className="pendaki">
+                            <p className="nama-pendaki">{val.nama}</p>
+                        </div>
+                        <div className="pendaki">
+                            <p className="jalur-pendaki">Melewati jalur {val.jalur}</p>
+                        </div>
+                        <div className="pendaki">
+                            <p className="review-pendaki">{val.review}</p>
+                        </div>
+                    </div> 
+                ))}
             </div>
         </>
     )

@@ -1,4 +1,4 @@
-import Router from './Router';
+import Router from "./routes/Router"
 import "./assets/style/style.scss"
 import "./assets/style/about.scss"
 import "./assets/style/review.scss"
